@@ -1,0 +1,238 @@
+import { Icons } from "@/components/icons";
+import {
+  FaReact,
+  FaNodeJs,
+  FaAws,
+  FaDatabase,
+  FaDocker,
+  FaJava,
+  FaCss3Alt,
+} from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiKubernetes,
+  SiJavascript,
+  SiPostgresql,
+  SiPython,
+} from "react-icons/si";
+import { HomeIcon } from "lucide-react";
+
+export const DATA = {
+  name: "Vishnu Sai Bhosekar",
+  initials: "VSB",
+  url: "https://vishnusaibhosekar.com/",
+  location: "Seattle, WA",
+  locationLink: "https://www.google.com/maps/place/seattle",
+  description: "I love building amazing apps.",
+  summary:
+    "With 5+ years of experience, I possess a wealth of knowledge in developing scalable and efficient software solutions using a diverse range of technologies, including Java, Python, and JavaScript. My expertise extends across the full-stack, with proficiency in front-end frameworks such as ReactJS and Angular, and back-end technologies like NodeJS and SpringBoot. Additionally, I have hands-on experience in designing and implementing AWS solutions, including S3, Lambda, EC2, and CloudFront. My commitment to delivering high-quality software solutions that meet business needs and drive innovation remains steadfast.",
+  avatarUrl: "/VS.jpg",
+  skills: [
+    {
+      name: "React",
+      icon: <FaReact className="text-blue-500 dark:text-blue-300" />,
+    },
+    {
+      name: "Next.js",
+      icon: <SiNextdotjs className="text-black dark:text-white" />,
+    },
+    {
+      name: "Python",
+      icon: <SiPython className="text-yellow-500 dark:text-yellow-300" />,
+    },
+    {
+      name: "Java",
+      icon: <FaJava className="text-red-500 dark:text-red-300" />,
+    },
+    {
+      name: "JavaScript",
+      icon: <SiJavascript className="text-yellow-400 dark:text-yellow-200" />,
+    },
+    {
+      name: "Node.js",
+      icon: <FaNodeJs className="text-green-500 dark:text-green-300" />,
+    },
+    {
+      name: "AWS",
+      icon: <FaAws className="text-orange-500 dark:text-orange-300" />,
+    },
+    {
+      name: "SQL",
+      icon: <FaDatabase className="text-gray-600 dark:text-gray-400" />,
+    },
+    {
+      name: "Postgres",
+      icon: <SiPostgresql className="text-indigo-500 dark:text-indigo-300" />,
+    },
+    {
+      name: "Docker",
+      icon: <FaDocker className="text-blue-400 dark:text-blue-200" />,
+    },
+    {
+      name: "Kubernetes",
+      icon: <SiKubernetes className="text-blue-600 dark:text-blue-400" />,
+    },
+    {
+      name: "CSS",
+      icon: <FaCss3Alt className="text-blue-300 dark:text-blue-100" />,
+    },
+  ],
+
+  navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
+  contact: {
+    email: "vishnusaibhosekar@gmail.com",
+    tel: "+12012383902",
+    social: {
+      GitHub: {
+        name: "GitHub",
+        url: "https://github.com/vishnusaibhosekar",
+        icon: Icons.github,
+
+        navbar: true,
+      },
+      LinkedIn: {
+        name: "LinkedIn",
+        url: "https://linkedin.com/in/vishnusaibhosekar/",
+        icon: Icons.linkedin,
+
+        navbar: true,
+      },
+      X: {
+        name: "X",
+        url: "https://x.com/vishnubhosekar",
+        icon: Icons.x,
+
+        navbar: true,
+      },
+      Telegram: {
+        name: "Telegram",
+        url: "https://t.me/vishnusaibhosekar",
+        icon: Icons.telegram,
+
+        navbar: true,
+      },
+    },
+  },
+  work: [
+    {
+      company: "OpenText",
+      href: "https://opentext.com",
+      badges: [],
+      location: "Hyderabad",
+      title: "Software Engineer",
+      logoUrl: "/ot.jpeg",
+      start: "Feb 2020",
+      end: "Aug 2022",
+      description:
+        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+    },
+  ],
+  education: [
+    {
+      school: "Amazon Web Services (AWS)",
+      href: "https://www.credly.com/badges/ef2eb51b-6509-475c-91a5-e30a30cf1314/public_url",
+      degree: "Developer - Associate",
+      logoUrl: "/AWS-Certified-Developer-Associate_badge.png",
+      start: "2023",
+      end: "2026",
+    },
+    {
+      school: "Amazon Web Services (AWS)",
+      href: "https://www.credly.com/badges/918d8fb8-81fa-4fae-8d79-76d3328eb053/public_url",
+      degree: "Cloud Practitioner",
+      logoUrl: "/AWS-Certified-Cloud-Practitioner_badge.png",
+      start: "2023",
+      end: "2026",
+    },
+    {
+      school: "New Jersey Institute of Technology",
+      href: "https://njit.edu",
+      degree: "Master's Degree in Computer Science (MCS)",
+      logoUrl: "/njit.png",
+      start: "2022",
+      end: "2023",
+    },
+    {
+      school: "Keshav Memorial Institute of Technology",
+      href: "https://kmit.in",
+      degree: "Bachelor's Degree of Computer Science (BCS)",
+      logoUrl: "/kmit.jpeg",
+      start: "2016",
+      end: "2020",
+    },
+  ],
+  projects: [
+    {
+      title: "Adopt-a-Pet",
+      href: "https://github.com/vishnusaibhosekar/adopt-a-pet",
+      dates: "",
+      active: false,
+      description:
+        "A portal to adopt pets. Each animal has a profile page with its attributes.",
+      technologies: ["React", "Node.js", "Express"],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/vishnusaibhosekar/adopt-a-pet",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/Adopt-a-Pet.gif",
+      video: "",
+    },
+    {
+      title: "Notes App Using ReactJS and Firebase",
+      href: "https://github.com/vishnusaibhosekar/NotesReactApp",
+      dates: "",
+      active: false,
+      description:
+        "A notes app to save notes and make to-do lists. Users log in using their Google account.",
+      technologies: ["React", "Firebase"],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/vishnusaibhosekar/NotesReactApp",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/Notes-React-App.gif",
+      video: "",
+    },
+    {
+      title: "ChatRoom App",
+      href: "https://github.com/vishnusaibhosekar/ChatRoom",
+      dates: "",
+      active: false,
+      description:
+        "A chatting application where multiple users can chat in a chatroom. There is no limit to the number of users.",
+      technologies: ["Node.js", "WebSockets"],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/vishnusaibhosekar/ChatRoom",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/ChatRoom.png",
+      video: "",
+    },
+    {
+      title: "E-Commerce Website",
+      href: "https://github.com/vishnusaibhosekar/IS601-005/tree/main/VShop",
+      dates: "",
+      active: false,
+      description:
+        "A website to buy and sell products. Users can add products to their cart, checkout, and pay. Admins can add, edit, and delete products.",
+      technologies: ["Python", "Flask", "HTML", "CSS", "Bootstrap", "MySQL"],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/vishnusaibhosekar/IS601-005/tree/main/VShop",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/Shop.jpeg",
+      video: "",
+    },
+  ],
+} as const;
