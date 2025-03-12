@@ -143,7 +143,7 @@ export const DATA = {
       location: "Remote",
       title: "AI Engineer (Contract)",
       logoUrl: "/ai-logo.png",
-      start: "2024",
+      start: "Present",
       end: "Present",
       description:
         "Building AI-driven ABM automation systems to optimize B2B marketing and sales pipelines. Integrating LLMs, AI Agents, and intelligent automation to enhance lead targeting, customer engagement, and revenue growth.",
