@@ -117,7 +117,7 @@ export default function Page() {
         </div>
       </section>
       <section id="projects">
-        <div className="space-y-12 w-full py-12">
+        <div className="w-full py-12 flex flex-col items-center">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -135,25 +135,32 @@ export default function Page() {
               </div>
             </div>
           </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.projects.map((project, id) => (
-              <BlurFade
-                key={project.title}
-                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-              >
-                <ProjectCard
-                  href={project.href}
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  dates={project.dates}
-                  tags={project.technologies}
-                  image={project.image}
-                  video={project.video}
-                  links={project.links}
-                />
+
+          <div className="grid gap-6 w-full max-w-[1200px] mx-auto">
+            {/* Large Centered Video Project */}
+            {DATA.projects.length > 0 && DATA.projects[0].video && (
+              <BlurFade delay={BLUR_FADE_DELAY * 12}>
+                <div className="col-span-2 w-full">
+                  <ProjectCard
+                    key={DATA.projects[0].title}
+                    {...DATA.projects[0]}
+                    className="w-full h-[400px]" // Make it bigger
+                  />
+                </div>
               </BlurFade>
-            ))}
+            )}
+
+            {/* Remaining 4 Projects in a 2x2 Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {DATA.projects.slice(1, 5).map((project, id) => (
+                <BlurFade
+                  key={project.title}
+                  delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                >
+                  <ProjectCard {...project} className="h-full" />
+                </BlurFade>
+              ))}
+            </div>
           </div>
         </div>
       </section>

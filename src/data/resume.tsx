@@ -10,11 +10,15 @@ import {
 } from "react-icons/fa";
 import {
   SiNextdotjs,
-  SiKubernetes,
+  SiApachekafka,
   SiJavascript,
   SiPostgresql,
   SiPython,
 } from "react-icons/si";
+import { GiArtificialIntelligence } from "react-icons/gi";
+import { AiOutlineAim } from "react-icons/ai";
+import { LuBrainCircuit } from "react-icons/lu";
+import { TbTopologyStarRing2 } from "react-icons/tb";
 import { HomeIcon } from "lucide-react";
 
 export const DATA = {
@@ -25,9 +29,27 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/seattle",
   description: "I love building amazing apps.",
   summary:
-    "With 5+ years of experience, I possess a wealth of knowledge in developing scalable and efficient software solutions using a diverse range of technologies, including Java, Python, and JavaScript. My expertise extends across the full-stack, with proficiency in front-end frameworks such as ReactJS and Angular, and back-end technologies like NodeJS and SpringBoot. Additionally, I have hands-on experience in designing and implementing AWS solutions, including S3, Lambda, EC2, and CloudFront. My commitment to delivering high-quality software solutions that meet business needs and drive innovation remains steadfast.",
+    "I build software that’s fast, scalable, and built to last. Whether it’s front-end, back-end, or the cloud, I focus on crafting clean architectures and smooth user experiences. I love solving tough problems, optimizing systems, and pushing technology forward. From AI-driven automation to cloud-native applications, I’m all about creating products that make an impact.",
   avatarUrl: "/VS.jpg",
   skills: [
+    {
+      name: "Agentic AI",
+      icon: <AiOutlineAim className="text-blue-500 dark:text-blue-300" />,
+    },
+    {
+      name: "GenAI",
+      icon: (
+        <GiArtificialIntelligence className="text-blue-500 dark:text-indigo-300" />
+      ),
+    },
+    {
+      name: "LLMs",
+      icon: <LuBrainCircuit className="text-blue-500 dark:text-white" />,
+    },
+    {
+      name: "PydanticAI",
+      icon: <TbTopologyStarRing2 className="text-blue-500 dark:text-red-300" />,
+    },
     {
       name: "React",
       icon: <FaReact className="text-blue-500 dark:text-blue-300" />,
@@ -42,7 +64,7 @@ export const DATA = {
     },
     {
       name: "Java",
-      icon: <FaJava className="text-red-500 dark:text-red-300" />,
+      icon: <FaJava className="text-red-500 dark:text--300" />,
     },
     {
       name: "JavaScript",
@@ -69,8 +91,8 @@ export const DATA = {
       icon: <FaDocker className="text-blue-400 dark:text-blue-200" />,
     },
     {
-      name: "Kubernetes",
-      icon: <SiKubernetes className="text-blue-600 dark:text-blue-400" />,
+      name: "Kafka",
+      icon: <SiApachekafka className="text-blue-600 dark:text-blue-400" />,
     },
     {
       name: "CSS",
@@ -115,6 +137,18 @@ export const DATA = {
   },
   work: [
     {
+      company: "SYL",
+      href: "#",
+      badges: [],
+      location: "Remote",
+      title: "AI Engineer (Contract)",
+      logoUrl: "/ai-logo.png",
+      start: "2024",
+      end: "Present",
+      description:
+        "Building AI-driven ABM automation systems to optimize B2B marketing and sales pipelines. Integrating LLMs, AI Agents, and intelligent automation to enhance lead targeting, customer engagement, and revenue growth.",
+    },
+    {
       company: "OpenText",
       href: "https://opentext.com",
       badges: [],
@@ -128,6 +162,14 @@ export const DATA = {
     },
   ],
   education: [
+    {
+      school: "Oracle Cloud Infrastructure (OCI)",
+      href: "https://www.credly.com/badges/ef2eb51b-6509-475c-91a5-e30a30cf1314/public_url",
+      degree: "GenAI - Professional",
+      logoUrl: "/OCI2024GAIOCP.jpg",
+      start: "2024",
+      end: "2026",
+    },
     {
       school: "Amazon Web Services (AWS)",
       href: "https://www.credly.com/badges/ef2eb51b-6509-475c-91a5-e30a30cf1314/public_url",
@@ -163,6 +205,25 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "AI Inbox Manager",
+      href: "https://github.com/vishnusaibhosekar/ai_inbox_manager",
+      dates: "",
+      active: true,
+      description:
+        "An AIGentic AI powered inbox manager that uses LLMs to generate replies.",
+      technologies: ["Python", "LLMs", "PydanticAI"],
+      tags: ["AI", "Automation", "NLP", "Python"],
+      links: [
+        {
+          type: "GitHub",
+          href: "https://github.com/vishnusaibhosekar/ai_inbox_manager",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "https://www.loom.com/embed/f263f9b0e95e48c68cbe71db33b980a5",
+    },
+    {
       title: "Adopt-a-Pet",
       href: "https://github.com/vishnusaibhosekar/adopt-a-pet",
       dates: "",
@@ -170,6 +231,7 @@ export const DATA = {
       description:
         "A portal to adopt pets. Each animal has a profile page with its attributes.",
       technologies: ["React", "Node.js", "Express"],
+      tags: ["React", "Node.js", "Express", "MongoDB"],
       links: [
         {
           type: "GitHub",
@@ -188,6 +250,7 @@ export const DATA = {
       description:
         "A notes app to save notes and make to-do lists. Users log in using their Google account.",
       technologies: ["React", "Firebase"],
+      tags: ["React", "Firebase", "Authentication", "Cloud Storage"],
       links: [
         {
           type: "GitHub",
@@ -206,6 +269,7 @@ export const DATA = {
       description:
         "A chatting application where multiple users can chat in a chatroom. There is no limit to the number of users.",
       technologies: ["Node.js", "WebSockets"],
+      tags: ["Node.js", "WebSockets", "Real-time", "Chat"],
       links: [
         {
           type: "GitHub",
@@ -224,6 +288,7 @@ export const DATA = {
       description:
         "A website to buy and sell products. Users can add products to their cart, checkout, and pay. Admins can add, edit, and delete products.",
       technologies: ["Python", "Flask", "HTML", "CSS", "Bootstrap", "MySQL"],
+      tags: ["Python", "Flask", "E-Commerce", "MySQL", "Bootstrap"],
       links: [
         {
           type: "GitHub",

@@ -50,17 +50,34 @@ export function ProjectCard({
         href={href || "#"}
         className={cn("block cursor-pointer", className)}
       >
-        {video && (
+        {video?.includes("loom.com/embed") ? ( // Check if it's a Loom video
+          <div
+            style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}
+          >
+            <iframe
+              src={video}
+              frameBorder="0"
+              allow="autoplay; fullscreen"
+              allowFullScreen
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+              }}
+            />
+          </div>
+        ) : video ? ( // If it's a regular video file
           <video
             src={video}
             autoPlay
             loop
             muted
             playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+            className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
           />
-        )}
-        {image && (
+        ) : image ? ( // If no video, show an image
           <Image
             src={image}
             alt={title}
@@ -69,7 +86,7 @@ export function ProjectCard({
             unoptimized
             className="h-40 w-full overflow-hidden object-cover object-top"
           />
-        )}
+        ) : null}
       </Link>
       <CardHeader className="px-2">
         <div className="space-y-1">
