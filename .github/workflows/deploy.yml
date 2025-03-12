@@ -3,7 +3,7 @@ name: Deploy Next.js to AWS S3
 on:
   push:
     branches:
-      - main
+      - main # Change this if using another branch
 
 jobs:
   deploy:
