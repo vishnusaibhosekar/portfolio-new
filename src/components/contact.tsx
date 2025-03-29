@@ -14,16 +14,24 @@ export default function Contact() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
     fetch("https://formspree.io/f/xwkjjvkk", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, message }),
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
     })
-      .then(() => {
-        alert("Thank you for the message! I will get back to you soon.");
-        setName("");
-        setEmail("");
-        setMessage("");
+      .then((res) => {
+        if (res.ok) {
+          alert("Thank you for the message! I will get back to you soon.");
+          form.reset();
+        } else {
+          alert("There was an error submitting the form.");
+        }
       })
       .catch((error) => alert(`Failed to send message: ${error}`));
   }
@@ -40,12 +48,12 @@ export default function Contact() {
               Get in Touch
             </h2>
             <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Want to chat? Just shoot me a dm{" "}
+              Want to chat? Just shoot me a dm with a direct question on{" "}
               <Link
                 href={DATA.contact.social.Telegram.url}
                 className="text-blue-500 hover:underline"
               >
-                with a direct question on Telegram
+                Telegram
               </Link>{" "}
               and I&apos;ll respond whenever I can.
             </p>

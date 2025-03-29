@@ -137,14 +137,25 @@ export const DATA = {
   },
   work: [
     {
+      company: "StokeIQ",
+      href: "#",
+      badges: [],
+      location: "Seattle, WA",
+      title: "Software Engineer",
+      logoUrl: "",
+      start: "Present",
+      end: "Present",
+      description: "Building AI-Agents.",
+    },
+    {
       company: "SYL",
       href: "#",
       badges: [],
       location: "Remote",
       title: "AI Engineer (Contract)",
       logoUrl: "/ai-logo.png",
-      start: "Present",
-      end: "Present",
+      start: "May 2024",
+      end: "March 2025",
       description:
         "Building AI-driven ABM automation systems to optimize B2B marketing and sales pipelines. Integrating LLMs, AI Agents, and intelligent automation to enhance lead targeting, customer engagement, and revenue growth.",
     },
